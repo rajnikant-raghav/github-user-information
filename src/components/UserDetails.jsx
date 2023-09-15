@@ -17,7 +17,7 @@ const UserDetails = ({ user }) => {
         <>
           <Box display={"flex"} justifyContent={"center"}>
             <Box
-              w={"350px"}
+              w={"340px"}
               bg={"lightgray"}
               padding={"10px"}
               borderRadius={"5px"}
