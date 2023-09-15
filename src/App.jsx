@@ -9,7 +9,10 @@ const App = () => {
   const fetchUser = () => {
     fetch(`https://api.github.com/users/${query}`)
       .then((res) => res.json())
-      .then((res) => setUser(res));
+      .then((res) => setUser(res))
+      .catch(err=>{
+        alert('error', err);
+      })
   };
  useEffect(()=>{
     fetchUser();

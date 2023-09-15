@@ -34,7 +34,7 @@ const UserDetails = ({ user }) => {
                   <Text lineHeight={"0"} size={"sm"}>
                     @{user.login}
                   </Text>
-                  <Text>Created at: {user.created_at.substring(0, 10)}</Text>
+                  <Text>Created at: {user.created_at?user.created_at.substring(0, 10):"null"}</Text>
                 </Box>
               </Box>
               <Text>{user.bio}</Text>
@@ -87,7 +87,7 @@ const UserDetails = ({ user }) => {
               color={'white'}
               fontSize={"20px"}
             >
-              {user.name.substring(0, 1)}
+              {user.name?user.name.substring(0,1):"N"}
             </Text>
             <Text>Welcome,</Text>
             <Heading fontSize={"15px"}>{user.name}</Heading>
